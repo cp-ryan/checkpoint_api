@@ -8,7 +8,6 @@ out_file = 'cp_output.txt'
 delim = '\n'
 comma = ','
 
-
 ''' XXX: parse arguments given by user '''
 ''' XXX: current problem list requirements
    service "ssh, ssh_version_2" '''
@@ -53,10 +52,8 @@ def setup(argv):
     else:
         port = argv[3]
 
-    username = argv[4]
+    username = argv[4]  
     password = argv[5]
-
-    print("Writing username and password: " + username + " " + password)
 
     f = open(session_file, "w+")
     sid = login(username, password, address, port)
