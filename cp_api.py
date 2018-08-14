@@ -110,15 +110,11 @@ def main():
 
         address, port, sid = session_data[0], session_data[1], session_data[2]
 
-        #print("Retrieved: " + address + " " + port + " " + sid)
-        #print("The command is: " + argv[1])
-
-        #print("Going to parse the following arguments..")
-
-        #for req in argv[2:]:
-        #    print(req)
-
         command = argv[1]
+
+        if 'logout' == argv[1]:
+            session_fd = open(session_file, 'w')
+            session_fd.truncate()
 
         ''' Actual Parsing '''
         payload = get_payload(argv[2:])

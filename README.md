@@ -65,6 +65,7 @@ For example: ``python3 cp_api.py set-group name "New Group 1" members "add:My Te
 
 ### ToDo
 
+- [x] Delete session contents after logouts
 - [x] Parse nested json
 - [x] Publish
 - [x] Start adding other commands
